@@ -12,6 +12,8 @@ def index2(request):
     posts = Articls.objects.all()
     return render(request, 'woman/index2.html', {'posts': posts, })
 
+def index4(request):
+    return 'aboba'
 
 def create(request):
     if request.method == 'POST':
