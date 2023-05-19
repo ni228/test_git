@@ -1,0 +1,16 @@
+{% extends 'woman/base.html' %}
+{% load static %}
+
+{% block main %}
+    <div class="features">
+        <h1>добавить статью</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.text_state }}<br>
+            <span>{{ erorr }}</span>
+            <button class="btn btn-success" type="submit">создать статью</button>
+        </form>
+    </div>
+{% endblock %}
+
