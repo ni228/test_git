@@ -19,12 +19,9 @@ def create(request):
         if form.is_valid():
             form.save()
             return redirect('main')
-        else:
-            erorr = 'форма была неверной'
 
     form = ArticlesForm
     data = {
         "form": form,
-        "erorr": erorr
     }
     return render(request, 'woman/create.html', data)
